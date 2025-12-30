@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    int n,i,x;
+    float y;
+    scanf("%d %d",&x,&n);
+    y=(float)x;
+    for(i=1;i<=n;i++){
+        y=y+0.001*y;
+    }
+    
+    printf("%.4f",y);
+    return 0;
+}
