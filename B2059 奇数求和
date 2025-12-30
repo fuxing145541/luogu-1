@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+    int m,n,i;
+    scanf("%d %d",&m,&n);
+
+    if(m%2==0) m++;
+    
+    int sum=0;
+    for(i=0;i+m<=n;i=i+2){
+        sum+=(i+m);
+    }
+    
+    printf("%d",sum);
+    return 0;
+}
