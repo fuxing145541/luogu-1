@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(){
+    int k;
+    scanf("%d",&k);
+
+    int A[k],i,x=0,y=0,z=0;
+    for(i=0;i<k;i++){
+        scanf("%d",&A[i]);
+        if(A[i]==1) x++;
+        if(A[i]==5) y++;
+        if(A[i]==10) z++;
+    }
+
+    printf("%d\n%d\n%d",x,y,z);
+    return 0;
+}
