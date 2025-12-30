@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+    int m,n;
+    scanf("%d %d",&m,&n);
+
+    int A[n],j=0,i;
+    for(i=0;i<n;i++){
+        scanf("%d",&A[i]);
+        if(A[i]<=m) m=m-A[i];
+        else j++;
+    }
+
+    printf("%d",j);
+    return 0;
+}
