@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+
+int main()
+{
+    int n;
+    double sum=0.0;
+    
+    scanf("%d",&n);
+    int q=2;
+    int p=1,t;
+    for(int i=1;i<=n;i++)
+    {
+        t=q;
+        sum+=(double)q/p;
+        q=q+p;
+        p=t;
+    }
+    printf("%.4lf",sum);
+    return 0;
+}
