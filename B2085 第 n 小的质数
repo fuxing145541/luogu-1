@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+//判断质数
+int prime (int n)
+{
+   
+    for(int j = 2 ; j*j <= n ; j++)
+    {
+        
+        
+如果 (n % j == 0)
+        {
+            
+返回 0;
+        }
+       
+    }
+    
+返回 1;
+}
+
+int 主函数 ()
+{
+    int n;
+    long long i,p;
+    int x=0;
+    scanf("%d",&n);
+    for(i=2;x<=n;i++)
+    {
+if(素数(i))
+        {
+            //记录个数
+            x++;
+            //记录质数
+            p=i;
+        }
+    }
+    printf("%lld", p);
+返回 0;
+}
