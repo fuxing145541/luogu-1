@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    int F[n];
+    int max=0;
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&F[i]);
+        if(F[max]<F[i])
+        {
+            max=i;
+        }
+    }
+    int ch=F[max]+1;
+    int W[ch];
+    for(int i=0;i<ch;i++)
+    {
+        W[i]=0;
+    }
+    for(int i=0;i<n;i++){
+        W[F[i]]++;
+    }
+    for(int i=0;i<ch;i++)
+    {
+        printf("%d\n",W[i]);
+    }
+    return 0;
+}
