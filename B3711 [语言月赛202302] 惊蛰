@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int shan(long long* a)
+{
+    long long s=*a;
+    while(s){
+        if((s)%4==0)
+             return 1;
+        (s)/=10;
+    }
+    long long l;
+    l=(*a)%10;
+    if(l%4==0) return 1;
+    (*a)/=100;
+    while(*a){
+        if(((*a)*10+l)%4==0) return 1;
+        (*a)/=10;
+    }
+    return 0;
+        
+}
+
+
+
+
+int main()
+{
+    int T;
+    scanf("%d",&T);
+    long long A[T];
+    for(int i=0;i<T;i++)
+    {
+        scanf("%lld",&A[i]);
+        long long* p;
+        p=A;
+        int h=shan(p+i);
+        if(h) printf("Yes\n");
+        else printf("No\n");
+    }
+    return 0;
+}
